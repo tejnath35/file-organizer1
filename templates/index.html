@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Organizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>📂 File Organizer</h1>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="message">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form action="/organize" method="POST">
+            <input type="text" name="folder" placeholder="Enter folder path..." required>
+            <button type="submit">Organize Files</button>
+        </form>
+
+        <a href="/undo" class="undo-btn">Undo Last Action</a>
+    </div>
+
+</body>
+</html>
