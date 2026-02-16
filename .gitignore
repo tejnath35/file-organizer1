@@ -1,4 +1,3 @@
+undo_log.json
 __pycache__/
 *.pyc
-undo_log.json
-.env
