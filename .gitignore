@@ -1,3 +1,10 @@
-undo_log.json
+# Python cache files
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+
+
+# Logs
+*.log
+
+undo_log.json
